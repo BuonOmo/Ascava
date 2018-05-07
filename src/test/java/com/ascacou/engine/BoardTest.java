@@ -29,6 +29,7 @@ public class BoardTest {
     public void toStringTest() throws Exception {
         board.move(Board.Position.A1, black);
         board.move(Board.Position.B2, white);
+        board.move(Board.Position.C2, black);
         System.out.println(board);
         assertEquals(
                 " +-+-+-+-+-+\n" +
@@ -38,7 +39,7 @@ public class BoardTest {
                 " +-+-+-+-+-+\n" +
                 "3|.|.|.|.|.|\n" +
                 " +-+-+-+-+-+\n" +
-                "2|.|W|.|.|.|\n" +
+                "2|.|W|B|.|.|\n" +
                 " +-+-+-+-+-+\n" +
                 "1|B|.|.|.|.|\n" +
                 " +-+-+-+-+-+\n" +

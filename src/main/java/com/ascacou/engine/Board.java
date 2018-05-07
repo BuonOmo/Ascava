@@ -24,6 +24,7 @@ public class Board {
         }
     }
 
+    // positions are [Y][X] - [A-E][1-5]
     private Case[][] board;
 
     Board() {
@@ -36,8 +37,8 @@ public class Board {
     }
 
     boolean move(Position position, Pawn pawn) {
-        if (board[position.x()][position.y()].isEmpty()) {
-            board[position.x()][position.y()].add(pawn);
+        if (board[position.y()][position.x()].isEmpty()) {
+            board[position.y()][position.x()].add(pawn);
             return true;
         }
         return false;
