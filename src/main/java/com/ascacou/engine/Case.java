@@ -1,25 +1,25 @@
 package com.ascacou.engine;
 
 public class Case {
-    private Pawn pawn;
-    private boolean hasPawn;
+    Pawn pawn;
+    private boolean empty;
 
     Case() {
         pawn = null;
-        hasPawn = false;
+        empty = true;
     }
 
     boolean isEmpty() {
-        return !hasPawn;
+        return empty;
     }
 
     void add(Pawn pawn) {
-        this.hasPawn = true;
+        this.empty = false;
         this.pawn = pawn;
     }
 
     @Override
     public String toString() {
-        return isEmpty() ? "." : pawn.toString();
+        return empty ? "." : pawn.toString();
     }
 }
