@@ -18,6 +18,12 @@ public class Case {
         this.pawn = pawn;
     }
 
+    // This method may be replaced and should be used carefully (since it alters too much board state)
+    void removePawn() {
+        this.empty = true;
+        this.pawn = null;
+    }
+
     @Override
     public String toString() {
         return empty ? "." : pawn.toString();
