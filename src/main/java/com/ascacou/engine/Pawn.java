@@ -1,6 +1,8 @@
 package com.ascacou.engine;
 
-public class Pawn {
+public enum Pawn {
+    BLACK(Color.BLACK), WHITE(Color.WHITE);
+
     Color color;
 
     Pawn(Color color) {

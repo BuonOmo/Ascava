@@ -15,10 +15,9 @@ public class CaseTest {
 
     @Test
     public void add() throws Exception {
-        Pawn pawn = new Pawn(Color.WHITE);
-        aCase.add(pawn);
+        aCase.add(Pawn.WHITE);
         assertEquals("non-emptiness", false, aCase.isEmpty());
-        assertEquals("pawn presence", pawn, aCase.pawn);
+        assertEquals("pawn presence", Pawn.WHITE, aCase.pawn);
     }
 
 }
