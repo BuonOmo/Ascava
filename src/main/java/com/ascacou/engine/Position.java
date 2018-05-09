@@ -48,6 +48,13 @@ public final class Position {
     }
 
     @Override
+    public boolean equals(Object obj) {
+        if (obj.getClass() != Position.class) return false;
+        Position position = (Position)(obj);
+        return this.x == position.x && this.y == position.y;
+    }
+
+    @Override
     public String toString() {
         return "" + ((char) (x + 65)) + (y + 1);
     }

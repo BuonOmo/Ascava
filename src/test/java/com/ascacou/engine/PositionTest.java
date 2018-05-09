@@ -50,4 +50,9 @@ public class PositionTest {
         assertEquals("C5", position.toString());
     }
 
+    @Test
+    public void equalsTest() throws Exception {
+        assertEquals(Position.C5, position);
+    }
+
 }
